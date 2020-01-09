@@ -1,3 +1,8 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
 
 html {
   font-size: 100%;
@@ -10,20 +15,41 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: #e2e2e2;
+  margin-left: 1rem;
+}
+
+h1 {
+  margin-top: 2.5rem;
+}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
   max-width: 50em;
+  align-items: center;
 }
 
 .btn {
-  padding: 0.75em;
+  text-decoration: none;
+  padding: .5em 0.75em;
   color: #e2e2e2;
-  background-color: #555
+  background-color: #555;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: black;
 }
 
 img {
   padding: 0.5em;
+  display: block;
+  width: 100%;
+
 }
 
 strong {
@@ -31,10 +57,9 @@ strong {
 }
 
 p {
+  margin-top: 0;
   padding-bottom: 0.5em;
 }
-
-
 
 @media only screen and (min-width: 38em) {
 
@@ -47,6 +72,9 @@ p {
     width: 50%;
   }
 
+  .img-flex {
+    width: 50%
+  }
 }
 
 @media only screen and (min-width: 60em) {
